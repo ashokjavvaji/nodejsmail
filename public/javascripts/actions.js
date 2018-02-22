@@ -1,5 +1,5 @@
 function sendTexteMail() {
-	var to="abc.def@xyz.com";
+    var to="abc.def@xyz.com";
     var sub="Text Mail Subject";
     var message="This is the text body of the mail.\\nThis should be in next line.\\n\\nRegards,\\nTest Mail";
     var requestBody = prepareRequestBody(to, sub, message);
@@ -8,7 +8,7 @@ function sendTexteMail() {
 };
 
 function sendHtmleMail() {
-	var to="abc.def@xyz.com";
+    var to="abc.def@xyz.com";
     var sub="HTML Mail Subject";
     var message="This is the HTML body of the mail.<br>This should be in <b>next line</b>.<br><br>Regards,<br>Test Mail";
     var requestBody = prepareRequestBody(to, sub, message);
