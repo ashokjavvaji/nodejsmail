@@ -5,14 +5,14 @@ var MailApi = require('../api/MailApi');
 /* Send Text eMail. */
 router.post('/text', function(req, res, next) {
   console.log('Text eMail Req: '+JSON.stringify(req.body));
-  MailApi.sendTextEMail('',req.body.subject,req.body.message,function(err,data){
+  MailApi.sendTextEMail(req.body.to,req.body.subject,req.body.message,function(err,data){
     res.send(data);
   });
 });
 
 router.post('/html', function(req, res, next) {
   console.log('HTML eMail Req: '+JSON.stringify(req.body));
-  MailApi.sendHtmlEMail('',req.body.subject,req.body.message,function(err,data){
+  MailApi.sendHtmlEMail(req.body.to,req.body.subject,req.body.message,function(err,data){
     res.send(data);
   });
 });
